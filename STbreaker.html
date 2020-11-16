@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Stereo Type Breaker</title>
+        <style>
+            header {
+              width: 100%;
+              padding: 0px;
+              margin: 0 auto;
+              font-size: 15px;
+              text-align: left;
+            }
+
+            header.headline {
+              font-size: 32px;
+            }
+
+            body {
+                font-size: 6em;
+                text-align: center;
+            }
+
+            label#times {
+              color: red;
+            }
+
+            h1 {
+              font-size: 50px;
+              text-align: left;
+            }
+
+            .shadow {
+              width: 100px;
+              font-size: 12px;
+              color: #FFFFFF;
+              text-align: center;
+              display: black;
+              padding: 10px 0 10px;
+              background: #dd6f6f;
+              border-radius: 5px;
+              box-shadow: 1px 1px #0a0a0a;
+            }
+
+
+        </style>
+    </head>
+    <header>
+      <h1 id="title">Stereo Type Breaker</h1>
+      <p>イノベーションとは既存の概念を壊した時に現れる。</p>
+      <p>昨今のイノベーションの例を挙げると、スマートフォン、リモートワーク、eスポーツ。。。などがある。</p>
+      <p>例えばスマートフォンであれば、家で使うことが当たり前だと思っていた『パソコン』を『持ち運べる』ものにしたところにイノベーションがある。</p>
+      <p>この例を観察すると、一つの『修飾語』と『名詞』の組み合わせがイノベーションの種となっている。</p>
+      <p>企画会議等のアイスブレイクで使ってみてはどうだろうか？下のボタンを押してみよう、そして、既存の概念を壊していこう！！</p>
+
+    </header>
+    
+    <body>
+        <p><button class="shadow" id="start">スタート</button></p>
+        <p id="textArea"></p>
+        <label id="times">×</label>
+        <p id="textArea2"></p>
+
+        <script>
+          const textArea = document.getElementById('textArea');
+          const textArea2 = document.getElementById('textArea2');
+          const button = document.getElementById('start');
+
+          button.addEventListener('click', function(){
+            const textLists = ['持ち運べる','ヘルシーな','都会には無い','ニッチな','簡単な','あえて手間をかけない','オンライン完結の','専業主婦向けの','購入したくなる','おひとり様専用','とことん豪華な','ストレス解消になる','ハードルの高い','スピリチュアルな','未来の','環境に優しい','恋人のような','グローバルな','初期費用のかからない','場所を選ばない'];
+            const rnd = Math.floor( Math.random() * textLists.length);
+            textArea.textContent = textLists[rnd];
+
+            const textLists2 = ['コンピューター','ファストフード','コミュニティ','プログラミング','英会話','仕事','朝ごはん','カウンセリング','コンサルティング','アプリ','本','サービス','動画','広告','Webサイト','カフェ','居酒屋','スクール','お風呂'];
+            const rnd2 = Math.floor( Math.random() * textLists2.length);
+            textArea2.textContent = textLists2[rnd2];
+          })
+
+        </script>
+    　</body>
+</html>
